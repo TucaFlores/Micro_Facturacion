@@ -18,7 +18,7 @@ router.get(
       }).lean();
 
       if (!bill) {
-        res.status(400).json({ msg: "bill not found", payment: {} });
+        res.status(400).json({ msg: "bill not found", bill: {} });
       }
       res.status(200).json({ bill: bill[0] });
     } catch (error) {}

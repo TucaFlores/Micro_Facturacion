@@ -3,11 +3,6 @@ import axios from "axios";
 import Bill, { I_Bill, I_Order } from "../models/Bill";
 import { publish } from "./rabbitRepo";
 
-const order: I_Order = {
-  orderId: "12345",
-  articles: [{ articleId: "5435", quantity: 3 }],
-};
-
 const consumer =
   (channel: Channel) =>
   async (msg: ConsumeMessage | null): Promise<void> => {

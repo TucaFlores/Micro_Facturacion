@@ -21,16 +21,16 @@ const validateAdminRole = async (
 ) => {
   const authorization = req.header("Authorization");
 
-  if (!authorization) {
+  /*   if (!authorization) {
     return res.status(401).json({
       msg: "authorization header empty, must include token",
     });
-  }
+  } */
 
   try {
     /*     const auth = await axios.get(`${AUTH_URL}/v1/users/current`, {
       headers: { Authorization: authorization },
-    });*/
+    }); */
     const auth = DATA;
     if (auth.status != 200) {
       throw new Error("Token not found in auth service");

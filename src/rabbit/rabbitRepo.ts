@@ -25,7 +25,7 @@ export async function unsubscribe(queue) {
 export async function subscribe(queue) {
   (await getClient()).subscribe(queue, consumer);
   subscribed = true;
-  console.log("subscribed to rabbit");
+  console.log(`subscribed to queue ${queue} in rabbit`);
 }
 
 export function getStatus(): boolean {

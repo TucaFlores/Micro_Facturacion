@@ -26,7 +26,9 @@ router.get(
         msg: `Transaction info of: ${bill[0].payment.txHash}`,
         txData,
       });
-    } catch (error) {}
+    } catch (error) {
+      return res.status(500).end();
+    }
   }
 );
 
